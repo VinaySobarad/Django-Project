@@ -1,0 +1,65 @@
+
+{% extends "base.html" %}
+
+{% block start %}
+
+
+
+    <h1>This is a sample Django Server</h1>
+    <h1>Index page</h1>
+
+
+{% comment %} 
+     <table class= "container">
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Can Vote</th>
+        </tr> 
+
+        {% for people in peoples %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ people.name }}</td>
+          <td>{{ people.age }}</td>
+          {% if people.age < 18 %}
+      <td style="background: red">👎</td>
+      {% else %}
+      <td>👍 </td>
+      {% endif %}
+          </td>
+        </tr> 
+
+
+    
+        {% endfor %}
+      </table>  {% endcomment %}
+
+      {% comment %} <p>{{text | truncatechars:7}}</p> {% endcomment %}
+
+      {% comment %} <p>
+    {% if "orange" in vegetable %}
+        Yes available
+    {% elif "potatoe" in vegetable %}
+        yes potatoe available
+    {% else %}
+      Not available 
+      {%endif%}
+      </p> {% endcomment %}
+
+      {% comment %} <p>{{vegetable.0}}</p> {% endcomment %}
+
+      <a href="/contact/">
+            Contact
+      </a>
+
+      |
+      <a href="/about/">
+        About
+
+      | <a href = "/receipes/">
+        Receipe
+  </a>
+
+  {% endblock %} 
